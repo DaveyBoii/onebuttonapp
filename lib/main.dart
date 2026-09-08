@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const OneButtonApp());
+  runApp(const MyApp());
 }
 
-class OneButtonApp extends StatelessWidget {
-  const OneButtonApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'One Button',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
       home: Scaffold(
         body: Center(
-          child: ElevatedButton(
+          child: FilledButton(
             onPressed: () {},
-            child: const Text('Do Nothing'),
+            child: const Text('Press me'),
           ),
         ),
       ),

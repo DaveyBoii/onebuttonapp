@@ -1,12 +1,16 @@
-# One Button App
+# onebuttonapp
 
-A minimal Flutter app containing one button whose callback intentionally does nothing.
+A new Flutter project..
 
-## Run
+## Getting Started
 
-```sh
-flutter pub get
-flutter run
-```
+This project is a starting point for a Flutter application.
 
-To generate missing platform folders, run `flutter create .` once before `flutter run`.
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

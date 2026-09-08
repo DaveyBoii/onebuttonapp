@@ -1,15 +1,21 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:one_button_app/main.dart';
+import 'package:onebuttonapp/main.dart';
 
 void main() {
-  testWidgets('shows one inert button', (tester) async {
-    await tester.pumpWidget(const OneButtonApp());
+  testWidgets('Button can be pressed without changing the screen',
+      (tester) async {
+    await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Do Nothing'), findsOneWidget);
+    expect(find.byType(FilledButton), findsOneWidget);
+    expect(tester.widget<FilledButton>(find.byType(FilledButton)).onPressed,
+        isNotNull);
 
-    await tester.tap(find.text('Do Nothing'));
-    await tester.pump();
+    await tester.tap(find.text('Press me'));
+    await tester.pumpAndSettle();
 
-    expect(find.text('Do Nothing'), findsOneWidget);
+    expect(find.text('Press me'), findsOneWidget);
+    expect(find.byType(FilledButton), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 }
